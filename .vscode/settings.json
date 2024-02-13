@@ -1,3 +1,5 @@
 {
-    "liveServer.settings.multiRootWorkspaceName": "helloworld"
+  "liveServer.settings.multiRootWorkspaceName": "helloworld",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true
 }
