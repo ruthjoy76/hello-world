@@ -48,18 +48,44 @@
 // kgToLbs(10);
 // kgToLbs('10kg');
 
-type Draggable = {
-    drag: () => void
+// type Draggable = {
+//     drag: () => void
+// };
+
+// type Resizable = {
+//     resize: () => void
+// };
+
+// type UIWidget = Draggable & Resizable;
+
+// let textBox:UIWidget = {
+//     drag: () => {},
+//     resize: () => {}
+// }
+
+// Literal (exact,specific)
+// type Quantity = 50 | 100;
+// let quantity: 50 | 100 = 100;
+
+// type Metric = 'cm' | 'inch';
+
+// function greet (name: string | null | undefined) {
+//     if (name)
+//         console.log (name.toUpperCase());
+//     else
+//         console.log('Hola!');
+// }
+
+// greet (undefined);
+
+type Customer = {
+    birthday: Date
 };
 
-type Resizable = {
-    resize: () => void
-};
-
-type UIWidget = Draggable & Resizable;
-
-let textBox:UIWidget = {
-    drag: () => {},
-    resize: () => {}
+function getCustomer(id: number): Customer | null | undefined {
+    return id === 0 ? null: { birthday: new Date() };
 }
 
+let customer = getCustomer(1);
+// Optional property access operator
+    console.log(customer?.birthday);
